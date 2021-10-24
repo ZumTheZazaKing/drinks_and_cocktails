@@ -10,6 +10,64 @@
 body{
     background-color: #f1f5f8;
 
+    .loading{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .drink{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        button{
+            padding: 5px 10px;
+            font-size: 16px;
+            letter-spacing: 2px;
+            background-color: lightseagreen;
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin: 10px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        h1{
+            margin: 10px;
+            margin-bottom: 30px;
+        }
+
+        .info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            img{
+                width: 30vw;
+                border-radius: 5px;
+            }
+            .details{
+                text-align: left;
+                padding: 10px 30px;
+                line-height: 1.5;
+                font-weight: bold;
+                .label{
+                    background-color: lightseagreen;
+                    color: rgb(15, 63, 61);
+                    padding: 3px 5px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
     #Main{
 
         #header{
@@ -25,6 +83,7 @@ body{
                 border-bottom: 3px solid rgb(53, 113, 224);
                 background-color: transparent;
                 transition: .2s ease-in;
+                width: 40%;
             }
             input:hover, input:focus{
                 box-shadow: 0px 3px 0 0px rgb(53, 113, 224);
@@ -51,8 +110,19 @@ body{
                     height: 100%;
                     border-radius: 5px 5px 0 0;
                 }
-                h1,h3,p{
-                    padding: 5px 15px;
+                div{
+                    padding: 10px;
+                    button{
+                        padding: 5px 10px;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        background-color: lightseagreen;
+                        color: white;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        cursor: pointer;
+                    }
                 }
             }
             .result:hover{
@@ -69,6 +139,29 @@ body{
     .result{
         margin: 20px 10px !important;
         width: 40vw !important;
+    }
+
+    .drink{
+        .info{
+            flex-direction: column;
+            img{
+                width: 70vw !important;
+            }
+            .details{
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+    #header{
+        input{
+            width: 80% !important;
+        }
     }
 
 }

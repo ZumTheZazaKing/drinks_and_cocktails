@@ -10,12 +10,12 @@ export function Main(){
     useEffect(() => {
         if(!searchQuery){
             fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
-            .then(res => res.json()).then(data => {setResults(data.drinks);console.log(data)})
+            .then(res => res.json()).then(data => setResults(data.drinks))
             return;
         }
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchQuery}`)
         .then(res => res.json())
-        .then(data => {setResults(data.drinks);console.log(data)})
+        .then(data => setResults(data.drinks))
     },[searchQuery])
 
     return (<div id="Main">
